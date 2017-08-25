@@ -14,7 +14,12 @@ VERSION : v1.0 BETA
   Coder : KRYPT0N - PROJECT0
   
   
- ## Discription :
- # Pheonix.ftp simple python tool allows you to craft malicious ftp server for exchanging heavy files easily.
+ # Discription :
+ Pheonix.ftp simple python tool allows you to craft malicious ftp server for exchanging heavy files easily.
+ Use it for your own risk! 
  
- 
+# Find me at :
+ Twitter : https://twitter.com/Krypt0n36
+Facebook : https://www.facebook.com/69nyan1cat69
+Youtube  : https://www.youtube.com/channel/UC5BjtBluv_No1-nK_ruRLzw
+

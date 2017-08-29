@@ -9,9 +9,9 @@
                                                   | |
                                                   |_|
 
-   TYPE : Post Exploitation tool
-VERSION : v1.0 BETA
-  Coder : KRYPT0N - PROJECT0
+   TYPE : Post Exploitation tool \n
+VERSION : v1.0 BETA \n
+  Coder : KRYPT0N - PROJECT0 \n
   
   
  # Discription :

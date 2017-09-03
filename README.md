@@ -35,7 +35,7 @@ b) Install it using wine, `wine msiexec /i reqs/python-2.7.13.msi /L*v log.txt`<
 c) Install pyftpdlib, `wine pip install pyftpdlib`</br>
 d) Install pyinstaller, `wine pip install pyinstaller`</br>
 
-FINALLY. Install filezilla:</br>
+3. Install filezilla:</br>
 `apt-get install filezilla`</br>
 
 # Demo : 

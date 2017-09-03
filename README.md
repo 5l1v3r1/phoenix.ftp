@@ -24,12 +24,19 @@ Youtube  : https://www.youtube.com/channel/UC5BjtBluv_No1-nK_ruRLzw<br />
 # Manual setup : 
 For some reasons the setup script may not work, so you can install phoenixftp manually. <br />
 
-1. Install wine:
+1. Install wine:</br>
 `dpkg --add-architecture i386`</br>
 `apt-get update`</br>
 `apt-get install wine32`</br>
 
-2.
+2. Install python:</br>
+a) Download python windows executable (.msi) version from the official website.</br>
+b) Install it using wine, `wine msiexec /i reqs/python-2.7.13.msi /L*v log.txt`</br>
+c) Install pyftpdlib, `wine pip install pyftpdlib`</br>
+d) Install pyinstaller, `wine pip install pyinstaller`</br>
+
+FINALLY. Install filezilla:</br>
+`apt-get install filezilla`</br>
 
 # Demo : 
 PhoenixFTP -- Official volume 1.0 DEMO : https://www.youtube.com/watch?v=mFTzDpTQsm8 <br />

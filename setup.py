@@ -4,13 +4,17 @@ from core import colors
 
 
 def execute(command):
-    os.system(command)
+    os.system("sudo " + command)
 
 
 def install():
     #execute("apt-get update")
     print colors.color.GREEN + "** Installing wine.."+ colors.color.ENDC
+    execute("dpkg --add-architecture i386")
+    execute("apt-get update")
+    execute("apt-get install wine32")
     execute("apt-get install wine")
+    execute("winecfg")
     print colors.color.GREEN + "** Python setup.."+ colors.color.ENDC
     execute("wine msiexec /i reqs/python-2.7.13.msi /L*v log.txt")
     print colors.color.GREEN + "** Downloading modules.."+ colors.color.ENDC
@@ -24,6 +28,7 @@ def install():
     print colors.color.GREEN + "** Installing filezilla ftp client.." + colors.color.ENDC
     execute("apt-get install filezilla")
     print colors.color.GREEN +"** Setup compete."+ colors.color.ENDC
+    print colors.color.BLUE + " PS: if you face any errors while the setup,\n please report it on :: %skrypt0n36@protonmail.com%s ."%(color.color.RED + colors.color.ENDC)
 
 
 install()
